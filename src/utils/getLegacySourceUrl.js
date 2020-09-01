@@ -54,33 +54,13 @@ export const legacySourceMap = {
     },
   },
   'Google Images': {
-    // 'sur:fc' // reuse
-    // 'sur:fmc' // reuse with modification
-    // 'sur:fm' // noncommercial reuse with modification
-    // 'sur:f' // noncommercial reuse
-
     image(search) {
-      let use = 'sur:f'
-
-      if (search.filters && search.filters.commercial) {
-        if (search.filters.commercial) {
-          use = 'sur:fc'
-        }
-        if (search.filters.modify) {
-          use = 'sur:fm'
-        }
-        if (search.filters.commercial && search.filters.modify) {
-          use = 'sur:fmc'
-        }
-      }
-
       return {
         url: 'https://www.google.com/search',
         query: {
-          tbm: 'isch', // this means 'search images'
-          tbs: use,
-          ved: '0ahUKEwjoqOr_2dLqAhXNlnIEHWoFDysQ4dUDCAY', // this *seems* to mean that an 'advanced' or 'filtered' search is occuring
           q: search.q,
+          tbm: 'isch', // this means 'search images'
+          tbs: 'il:cl',
         },
       }
     },

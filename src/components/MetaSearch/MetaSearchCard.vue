@@ -34,10 +34,10 @@
         </span>
       </div>
 
-      <h5 for="metaUseCheckboxes" class="b-header margin-bottom-small">
+      <!-- <h5 for="metaUseCheckboxes" class="b-header margin-bottom-small">
         {{ $t('meta-search.card.checkboxes.title') }}
-      </h5>
-      <div class="meta-filters margin-bottom-bigger flex">
+      </h5> -->
+      <!-- <div class="meta-filters margin-bottom-bigger flex">
         <label for="commercial-chk" class="margin-right-big"
           ><input
             id="commercial-chk"
@@ -56,7 +56,7 @@
           />
           {{ $t('meta-search.card.checkboxes.modify') }}</label
         >
-      </div>
+      </div> -->
 
       <MetaSourceList :type="type" :query="editableQuery" />
       <p class="caption has-text-weight-semibold">
